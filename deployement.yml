@@ -2,24 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    io.kompose.service: playground
     app: playground
   name: playground
 spec:
   selector:
     matchLabels:
-      io.kompose.service: playground
       app: playground
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        io.kompose.service: playground
         app: playground
     spec:
       containers:
-        - image: wil42/playground:v2
+        - image: wil42/playground:v1
           name: playground
           ports:
             - containerPort: 80
