@@ -6,5 +6,5 @@ spec:
   selector:
     app: iot-app
   ports:
-    - port: 80
-      targetPort: 80
+    - port: 8080
+      targetPort: 8888
