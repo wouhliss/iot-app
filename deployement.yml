@@ -1,24 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: iot-app
   labels:
-    app: playground
-  name: playground
+    app: iot-app
 spec:
   selector:
     matchLabels:
-      app: playground
-  strategy:
-    type: Recreate
+      app: iot-app
   template:
     metadata:
       labels:
-        app: playground
+        app: iot-app
     spec:
       containers:
-        - image: wil42/playground:v1
-          name: playground
+        - name: iot-app
+          image: wil42/playground:v1
           ports:
             - containerPort: 80
-              protocol: TCP
-      restartPolicy: Always

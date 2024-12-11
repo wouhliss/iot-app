@@ -10,6 +10,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: playground
+                name: iot-app
                 port:
                   number: 80
