@@ -10,6 +10,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: iot-app
+                name: wouhliss-app
                 port:
                   number: 8080
